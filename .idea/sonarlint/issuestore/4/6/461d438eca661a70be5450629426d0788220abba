@@ -1,0 +1,8 @@
+
+w	cpp:S3230"bDo not assign data members in a constructor. Initialize member "street" in an initialization list.(æ²®…
+z	cpp:S3230"`Do not assign data members in a constructor. Initialize member "city" in an initialization list.(Ûü†éýÿÿÿÿ
+}	cpp:S3230"cDo not assign data members in a constructor. Initialize member "country" in an initialization list.(ì—ïÒøÿÿÿÿ
+z	cpp:S3230"`Do not assign data members in a constructor. Initialize member "name" in an initialization list.(£ÍÉÖþÿÿÿÿ
+v	cpp:S3230"aDo not assign data members in a constructor. Initialize member "email" in an initialization list.(§¯ùž
+v	cpp:S3230"aDo not assign data members in a constructor. Initialize member "phone" in an initialization list.(Âìê‚
+x	cpp:S3230 "cDo not assign data members in a constructor. Initialize member "address" in an initialization list.(ìîý‘
