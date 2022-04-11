@@ -362,6 +362,7 @@ bool Van::serviceTires() {
 
 void History::addEngineService(int mileage, Date date, std::string location) {
     this->engines.emplace_back(mileage, date, location);
+    this->printJson();
 }
 
 void History::addTransmissionService(int mileage, Date date, std::string location) {
@@ -477,4 +478,23 @@ bool Motorcycle::serviceTires() {
         return true;
     }
     return false;
+}
+void History::printJson() {
+    StringBuffer buffer;
+    Writer<StringBuffer> writer(buffer);
+    writer.StartObject();
+    writer.Key("Engine");
+    writer.StartArray();
+    for (auto& engine : engines) 
+    {
+        writer.Key("Milage");
+        writer.Int(engine.getMileage());
+        writer.Key("Date");
+        writer.String(engine.date.getDate().c_str());
+        writer.Key("Location");
+        writer.String(engine.location.c_str());
+    }
+    writer.StartObject();
+    writer.EndObject();
+
 }

@@ -14,3 +14,7 @@ Date::Date() {
     this->month = 0;
     this->day = 0;
 }
+string Date::getDate() {
+    string date = to_string(day); + "-" + to_string(month) + "-" + to_string(year);
+    return date;
+}

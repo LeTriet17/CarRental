@@ -4,18 +4,21 @@
 
 #ifndef CARRENTAL_VEHICLE_H
 #define CARRENTAL_VEHICLE_H
-
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
 #include <iostream>
 #include "constant.h"
 #include "requests.h"
 #include "datetime.h"
 #include "vehiclereservation.h"
+using namespace rapidjson;
+
 class History {
     class HistoryNode {
+    public:
         int mileage;
         Date date;
         std::string location;
-    public:
         HistoryNode(int mileage, Date date, std::string location) : mileage(mileage), date(date), location(location) {}
         int getMileage() const { return mileage; }
     };
@@ -30,6 +33,7 @@ public:
     int lastEngineMileage();
     int lastTransmissionMileage();
     int lastTireMileage();
+    void printJson();
 };
 
 
